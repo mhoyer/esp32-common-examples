@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <Blink.h>
 
 #define LED_PIN 8
 #define LED_ON LOW
@@ -9,8 +10,5 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(LED_PIN, LED_ON);
-  delay(50);
-  digitalWrite(LED_PIN, LED_OFF);
-  delay(950);
+  blink.loop(LED_PIN, INVERT_HIGH_LOW);
 }
